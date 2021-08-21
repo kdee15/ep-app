@@ -1,0 +1,184 @@
+// 0.0 BASE [ 0.3. TYPOGRAPHY ]  ######################################################################################
+
+// A. FONT SOURCE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// A.1. FONTS ---------------------------------------------
+// A.1.1. FONTS -------------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+$default: Roboto, Helvetica, 'Arial Black', sans-serif;
+
+@font-face {
+  font-family: dreams;
+  src: url('/assets/fonts/billiondreams.ttf') format("truetype");
+}
+
+// A.1.1. END ---------------------------------------------
+
+// A.1.2. FONTS -------------------------------------------
+
+$default      : Roboto, helvetica, arial, sans-serif;
+$dreams       : dreams, helvetica, arial, sans-serif;
+
+// A.1.2. END ---------------------------------------------
+
+// A.1.3. ENVIRONMENT VARIABLES ---------------------------
+
+// font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+
+$view-min-xs:    320;
+$view-max-xs:    767;
+
+$view-min-sm:    768;
+$view-max-sm:    991;
+
+$view-min-md:    992;
+$view-max-md:    1920;
+
+// A.1.3. END ---------------------------------------------
+
+// A.1. END -----------------------------------------------
+
+// A.2. RESPONSIVE FONTS ----------------------------------
+
+// A.2.1. QUICK RESPONSIVE FONT SETTINGS ------------------
+
+// H1 -----------------------
+$h1-min-xs: 40; // minimum font size at smallest screen size
+$h1-max-md: 120; // maximum font size at largest screen size
+$h1-max:    120; // failsafe for larger screens
+
+$h1-min-xs: 40; // minimum line height at smallest screen size
+$h1-max-md: 120; // maximum line height at largest screen size
+$h1-max:    120; // failsafe for larger screens
+
+h1, .a-h1 * {
+  font-family: $dreams;
+  font-weight: 400;
+  font-size: calc( #{$h1-min-xs}px + (#{$h1-max-md} - #{$h1-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+  line-height: calc( #{$h1-min-xs}px + (#{$h1-max-md} - #{$h1-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+}
+
+// END: H1 -----------------
+
+// H2 -----------------------
+$h2-min-xs: 28; // minimum font size at smallest screen size
+$h2-max-md: 90; // maximum font size at largest screen size
+$h2-max:    90; // failsafe for larger screens
+
+$h2-min-xs: 28; // minimum line height at smallest screen size
+$h2-max-md: 90; // maximum line height at largest screen size
+$h2-max:    90; // failsafe for larger screens
+
+h2, .a-h2 * {
+  font-family: $dreams;
+  font-weight: 300;
+  font-size: calc( #{$h2-min-xs}px + (#{$h2-max-md} - #{$h2-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+  line-height: calc( #{$h2-min-xs}px + (#{$h2-max-md} - #{$h2-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+}
+
+// END: H2 -----------------
+
+// Default -----------------
+$p-min-xs: 16; // minimum font size at smallest screen size
+$p-max-md: 20; // maximum font size at largest screen size
+$p-max:    20; // failsafe for larger screens
+
+$p-min-xs: 12; // minimum line height at smallest screen size
+$p-max-md: 16; // maximum line height at largest screen size
+$p-max:    16; // failsafe for larger screens
+
+p, .fnt-md {
+  font-family: $default;
+  font-size: calc( #{$p-min-xs}px + (#{$p-max-md} - #{$p-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+  line-height: calc( #{$p-min-xs}px + (#{$p-max-md} - #{$p-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+}
+
+// END: Default -------------
+
+// A.2.1. END ---------------------------------------------
+
+// A.2. END -----------------------------------------------
+
+// A.3. CUSTOM SITE FONTS ---------------------------------
+
+$h3-max:       75;
+$h4-max:       75;
+$h5-max:       75;
+$h6-max:       75;
+
+h3,.a-h3      { font-size: $h3-max+px; }
+h4,.a-h4      { font-size: $h4-max+px; }
+h5,.a-h5      { font-size: $h5-max+px; }
+h6,.a-h6      { font-size: $h6-max+px; }
+
+// A.3. END -----------------------------------------------
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. MOBILE VIEW +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// B.1. MAX-WIDTH: 575px ----------------------------------
+
+@media ($xs-dn) {}
+
+// B.2. MIN-WIDTH: 576px ----------------------------------
+
+@media ($xs-up) {}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// B.1. MAX-WIDTH: 767px ----------------------------------
+
+@media ($sm-dn) {
+
+  //h2,.a-h2 {
+  //  font-size: calc( #{$h2-min-xs}px + (#{$h2-max-xs} - #{$h2-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-xs} - #{$view-min-xs})));
+  //}
+
+}
+
+// B.2. MIN-WIDTH: 768px ----------------------------------
+
+@media ($sm-up) {
+
+  //h2,.a-h2 {
+  //  font-size: calc( #{$h2-min-sm}px + (#{$h2-max-sm} - #{$h2-min-sm}) * ((100vw - #{$view-min-sm}px) / (#{$view-max-sm} - #{$view-min-sm})));
+  //}
+
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+
+  //h2,.a-h2 {
+  //  font-size: calc( #{$h2-min-md}px + (#{$h2-max-md} - #{$h2-min-md}) * ((100vw - #{$view-min-md}px) / (#{$view-max-md} - #{$view-min-md})));
+  //}
+
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// F. MIN-WIDTH: 1920px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {
+
+  //h2,.a-h2      { font-size: $h2-max+px; }
+
+}
+
+// F. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################
