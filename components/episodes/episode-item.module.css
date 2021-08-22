@@ -1,4 +1,15 @@
-.episodeCard .a_image {
+.icon {
+  width: 20px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.card-image {
   width: 100%;
-  height: auto;
+  display: block;
+  position: relative;
+}
+
+.image {
+  width: 100%;
 }

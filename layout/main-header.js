@@ -1,11 +1,13 @@
 import Link from "next/link";
+import HomeIcon from "../components/icons/home-icon";
 import classes from "./main-header.module.css";
 function MainHeader() {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>
-        <Link href="/">Home</Link>
-      </div>
+      <Link href="/" className={classes.link}>
+        <span>HOME</span>
+      </Link>
+      <div className={classes.logo}></div>
     </header>
   );
 }

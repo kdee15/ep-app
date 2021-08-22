@@ -1,43 +1,57 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
+/* STYLE [ GLOBAL ]  ############################################################################################### */
 
-* {
-  box-sizing: border-box;
-}
+/* A.1. GLOBAL STYLE ----------------------------------- */
 
+html,
 body {
-  margin: 0;
-  font-family: "Open Sans", "Lato", sans-serif;
-  color: #414141;
-  background-color: #e4f1f1;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-  color: #2b2b2b;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.center {
-  margin: auto;
+.content-block {
+  margin: 30px 30px 60px;
   text-align: center;
 }
 
-figure {
+li {
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+/* A.1. END -------------------------------------------- */
+
+/* B. MEDIA QUERIES ------------------------------------ */
+
+/* B.1. GRACEFUL DEGRADATION ------------ */
+
+/* B.1. END ----------------------------- */
+
+/* B.2. PROGRESSIVE ENHANCEMENT --------- */
+/* 768px up */
+@media (min-width: 768px) {
+  .content-block {
+    margin-top: 60px;
+  }
+
+  .content-block h1 {
+    margin-bottom: 30px;
+  }
 }
+
+/* 991px up */
+@media (min-width: 991px) {
+}
+
+/* 1200px up */
+@media (min-width: 1200px) {
+}
+
+/* 1440px up */
+@media (min-width: 1440px) {
+}
+
+/* B.2. END ----------------------------- */
+/* B. END ---------------------------------------------- */
+
+/* END OF FILE ##################################################################################################### */

@@ -1,7 +1,6 @@
-import ArrowRightIcon from "../components/icons/arrow-right-icon";
-import Button from "../components/ui/button";
 import { useState, useEffect } from "react";
 import EpisodeList from "../components/episodes/episode-list";
+import HeroBlock from "../components/ui/hero-block";
 
 function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,7 +31,11 @@ function HomePage() {
 
   return (
     <section>
-      <h1>All Episodes Page</h1>
+      <HeroBlock />
+      <div className="content-block container">
+        <h1>Rick and Morty Episodes Page</h1>
+        <p>A quick little NextJS demo</p>
+      </div>
       <EpisodeList episodes={loadedEpisodes} />
     </section>
   );

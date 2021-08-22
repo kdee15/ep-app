@@ -1,5 +1,5 @@
 import "../styles/normalize.css";
-import "../styles/bootstrap-grid.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/styles.css";
 import Layout from "../layout/layout";
 

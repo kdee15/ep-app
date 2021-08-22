@@ -1,0 +1,51 @@
+/* EPISODES [ EPISODE ITEM ]  ###################################################################################### */
+
+/* A.1. GLOBAL STYLE ----------------------------------- */
+
+.hero {
+  min-height: 100vh;
+  background-color: black;
+  background-image: url("/images/hero-sm.jpg");
+  background-position: center top;
+  background-size: cover;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* A.1. END -------------------------------------------- */
+
+/* B. MEDIA QUERIES ------------------------------------ */
+
+/* B.1. GRACEFUL DEGRADATION ------------ */
+
+/* B.1. END ----------------------------- */
+
+/* B.2. PROGRESSIVE ENHANCEMENT --------- */
+/* 768px up */
+@media (min-width: 768px) {
+  .hero {
+    background-image: url("/images/hero.jpg");
+    background-position: center right;
+  }
+}
+
+/* 991px up */
+@media (min-width: 991px) {
+}
+
+/* 1200px up */
+@media (min-width: 1200px) {
+}
+
+/* 1440px up */
+@media (min-width: 1440px) {
+}
+
+/* B.2. END ----------------------------- */
+/* B. END ---------------------------------------------- */
+
+/* END OF FILE ##################################################################################################### */
