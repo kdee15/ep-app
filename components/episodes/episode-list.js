@@ -1,5 +1,5 @@
 import EpisodeItem from "./episode-item";
-import classes from "./episode-item.module.css";
+import classes from "./episode-list.module.css";
 function EpisodeList(props) {
   const { episodes } = props;
   return (

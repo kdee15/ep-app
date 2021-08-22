@@ -1,15 +1,38 @@
+/* EPISODES [ EPISODE LIST ]  ###################################################################################### */
+
+/* A.1. GLOBAL STYLE ----------------------------------- */
 .icon {
   width: 20px;
   display: inline-block;
   margin-left: 10px;
 }
 
-.card-image {
-  width: 100%;
-  display: block;
-  position: relative;
+/* A.1. END -------------------------------------------- */
+
+/* B. MEDIA QUERIES ------------------------------------ */
+
+/* B.1. GRACEFUL DEGRADATION ------------ */
+
+/* B.1. END ----------------------------- */
+
+/* B.2. PROGRESSIVE ENHANCEMENT --------- */
+/* 768px up */
+@media (min-width: 768px) {
 }
 
-.image {
-  width: 100%;
+/* 991px up */
+@media (min-width: 991px) {
 }
+
+/* 1200px up */
+@media (min-width: 1200px) {
+}
+
+/* 1440px up */
+@media (min-width: 1440px) {
+}
+
+/* B.2. END ----------------------------- */
+/* B. END ---------------------------------------------- */
+
+/* END OF FILE ##################################################################################################### */

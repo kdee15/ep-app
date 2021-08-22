@@ -24,9 +24,11 @@ function HomePage() {
   }, []);
 
   if (isLoading) {
-    <section>
-      <p>Loading ...</p>
-    </section>;
+    return (
+      <section className="o-preloader d-flex">
+        <p>Loading ...</p>
+      </section>
+    );
   }
 
   return (

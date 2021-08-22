@@ -1,13 +1,8 @@
-import Head from "next/head";
-import Image from "next/image";
-import { useState, useEffect } from "react";
 // import styles from "../../../styles/Home.module.css";
 
 export async function getServerSideProps({ query }) {
   const { id } = query;
   let episodeDetail = null;
-  // const res = await fetch(`${defaultEndpoint}${id}`);
-  // const data = await res.json();
 
   await fetch(
     "https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes"
@@ -21,8 +16,6 @@ export async function getServerSideProps({ query }) {
         episodes.push(data._embedded.episodes[episode]);
       }
       return episodes;
-      // setIsLoading(false);
-      // setLoadedEpisodes(episodes);
     })
     .then((episodes) => {
       episodeDetail = episodes.filter((ep) => {
@@ -39,7 +32,19 @@ export async function getServerSideProps({ query }) {
 }
 
 export default function Episode(props) {
-  // const { name, image, origin, status, species } = data;
-  console.log("ss", props);
-  return <div>hello - {props.episodeDetail[0].id}</div>;
+  const epData = props.episodeDetail[0];
+  return (
+    <section className="o-episode-detail">
+      <img
+        className="a-image "
+        alt={epData.name}
+        src={"/images/ep-" + epData.id + ".jpg"}
+      />
+      <div className="o-card">
+        <div className="m-card-body">
+          <h1>{epData.name}</h1>
+        </div>
+      </div>
+    </section>
+  );
 }
