@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 const DUMMY_EVENTS = [
   {
     id: "e1",
@@ -32,6 +34,10 @@ export function getAllEvents() {
   return DUMMY_EVENTS;
 }
 
+export function getAllMeetups() {
+  return DUMMY_EVENTS;
+}
+
 export function getEventById(id) {
   return DUMMY_EVENTS.find((event) => event.id === id);
 }
@@ -42,4 +48,56 @@ export function getAllEpisodes() {
 
 export function getEpisodeById(id) {
   return DUMMY_EVENTS.find((episode) => episode.id === id);
+}
+
+export function getAllAPIEpisodes() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedEpisodes, setLoadedEpisodes] = useState([]);
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("https://episodes-260ee-default-rtdb.firebaseio.com/episodes.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const episodes = [];
+        for (const key in data) {
+          const episode = {
+            id: key,
+            ...data[key],
+          };
+          episodes.push(episode);
+        }
+        setIsLoading(false);
+        setLoadedEpisodes(episodes);
+        console.log(data);
+      });
+  }, []);
+}
+
+export function getAPIEpisodeById(id) {
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedEpisodes, setLoadedEpisodes] = useState([]);
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("https://episodes-260ee-default-rtdb.firebaseio.com/episodes.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const episodes = [];
+        for (const key in data) {
+          const episode = {
+            id: key,
+            ...data[key],
+          };
+          episodes.push(episode);
+        }
+        setIsLoading(false);
+        setLoadedEpisodes(episodes);
+        console.log(data);
+      });
+  }, []);
+
+  return episodes.find((episode) => episode.id === id);
 }

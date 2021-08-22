@@ -1,9 +1,7 @@
-import ArrowRightIcon from "../../components/icons/arrow-right-icon";
-import Button from "../../components/ui/button";
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import EpisodeList from "../../components/episodes/episode-list";
 
-function HomePage() {
+function EpisodeDetailPage(props) {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedEpisodes, setLoadedEpisodes] = useState([]);
   useEffect(() => {
@@ -24,18 +22,26 @@ function HomePage() {
       });
   }, []);
 
-  if (isLoading) {
-    <section>
-      <p>Loading ...</p>
-    </section>;
-  }
+  const router = useRouter();
+  const episodeId = router.query.episodeId;
+  // const episode = getAPIEpisodeById(episodeId);
+  const { date, address, image, imageAlt } = props;
+  // if (!episode) {
+  //   return <p>No events found</p>;
+  // }
 
   return (
-    <section>
-      <h1>All Episodes Page</h1>
-      <EpisodeList episodes={loadedEpisodes} />
-    </section>
+    <div class="container">
+      <div class="row">
+        <figure class="col-12 col-md-5">
+          <img src={`/${episode.image}`} alt={episode.imageAlt} />
+        </figure>
+        <div class="col-12 col-md-7">
+          <h1>{episode.title}</h1>
+        </div>
+      </div>
+    </div>
   );
 }
 
-export default HomePage;
+export default EpisodeDetailPage;

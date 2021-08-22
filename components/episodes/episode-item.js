@@ -3,30 +3,29 @@ import Button from "../ui/button";
 import classes from "./episode-item.module.css";
 
 function EpisodeItem(props) {
-  const { title, image, id } = props;
+  const { name, image, id } = props;
   const exploreLink = `/episodes/${id}`;
+  console.log("epi-item", props);
   return (
-    <div class="col-12 col-md-6">
-      <div className={classes.episodeCard}>
-        <figure class="m-0 p-0" className={classes.m_card_image}>
-          <img class={classes.a_image} src={"/" + image} alt={title} />
+    <li>
+      <div>
+        <figure>
+          <img src={"/" + image} alt={name} />
         </figure>
       </div>
 
       <div>
         <div>
-          <h2>{title}</h2>
+          <h2>name:{name}</h2>
         </div>
         <div>
           <Button link={exploreLink}>
             <span>Explore Link</span>
-            <span>
-              <ArrowRightIcon />
-            </span>
+            <span>{/* <ArrowRightIcon /> */}</span>
           </Button>
         </div>
       </div>
-    </div>
+    </li>
   );
 }
 
