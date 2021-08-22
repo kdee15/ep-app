@@ -1,4 +1,5 @@
 import EpisodeItem from "./episode-item";
+import Link from "next/link";
 // import classes from "./episode-item.module.css";
 function EpisodeList(props) {
   const { episodes } = props;
@@ -16,7 +17,11 @@ function EpisodeList(props) {
             <div>
               <h2>name:{episode.id}</h2>
             </div>
-            <div></div>
+            <div>
+              <Link href="/episodes/[id]" as={`/episodes/${episode.id}`}>
+                <a>click me</a>
+              </Link>
+            </div>
           </div>
         </li>
       ))}

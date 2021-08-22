@@ -1,47 +1,45 @@
-import { useRouter } from "next/router";
+import Head from "next/head";
+import Image from "next/image";
 import { useState, useEffect } from "react";
+// import styles from "../../../styles/Home.module.css";
 
-function EpisodeDetailPage(props) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [loadedEpisodes, setLoadedEpisodes] = useState([]);
-  useEffect(() => {
-    setIsLoading(true);
-    fetch(
-      "https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes"
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        const episodes = [];
-        for (const episode in data._embedded.episodes) {
-          episodes.push(data._embedded.episodes[episode]);
-        }
-        setIsLoading(false);
-        setLoadedEpisodes(episodes);
+export async function getServerSideProps({ query }) {
+  const { id } = query;
+  let episodeDetail = null;
+  // const res = await fetch(`${defaultEndpoint}${id}`);
+  // const data = await res.json();
+
+  await fetch(
+    "https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes"
+  )
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      let episodes = [];
+      for (const episode in data._embedded.episodes) {
+        episodes.push(data._embedded.episodes[episode]);
+      }
+      return episodes;
+      // setIsLoading(false);
+      // setLoadedEpisodes(episodes);
+    })
+    .then((episodes) => {
+      episodeDetail = episodes.filter((ep) => {
+        return ep.id == id;
       });
-  }, []);
+      return episodeDetail;
+    });
 
-  const router = useRouter();
-  const episodeId = router.query.episodeId;
-  // const episode = getAPIEpisodeById(episodeId);
-  const { date, address, image, imageAlt } = props;
-  // if (!episode) {
-  //   return <p>No events found</p>;
-  // }
-
-  return (
-    <div class="container">
-      <div class="row">
-        <figure class="col-12 col-md-5">
-          <img src={`/${episode.image}`} alt={episode.imageAlt} />
-        </figure>
-        <div class="col-12 col-md-7">
-          <h1>{episode.title}</h1>
-        </div>
-      </div>
-    </div>
-  );
+  return {
+    props: {
+      episodeDetail,
+    },
+  };
 }
 
-export default EpisodeDetailPage;
+export default function Episode(props) {
+  // const { name, image, origin, status, species } = data;
+  console.log("ss", props);
+  return <div>hello - {props.episodeDetail[0].id}</div>;
+}

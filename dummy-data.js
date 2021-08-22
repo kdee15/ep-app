@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
 
+const endpoint1 = "https://rickandmortyapi.com/api/character/";
+const endpoint2 =
+  "https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes";
+
 const DUMMY_EVENTS = [
   {
     id: "e1",
