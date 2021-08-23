@@ -2,7 +2,7 @@ import Head from "next/head";
 function Header() {
   return (
     <Head>
-      <meta name="title" content="Rick and Morty NextJS" />
+      <title>Rick and Morty NextJS</title>
       <meta name="description" content="Test NextJS Site" />
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
