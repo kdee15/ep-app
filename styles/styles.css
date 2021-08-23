@@ -55,47 +55,6 @@ li {
 
 /* EPISODE LIST CARDS ------------------- */
 
-.o-card {
-  box-shadow: 0 0 5px #292626;
-  padding: 0;
-  margin-bottom: 30px;
-  background-color: #f2f2f2;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-.o-card:hover {
-  box-shadow: 0 0 10px #585656;
-  transition: 0.3s;
-}
-
-.o-card:hover .m-card-image .a-image {
-  transform: scale(1.05);
-  transition: 0.8s;
-}
-
-.m-card-image {
-  width: 100%;
-  display: block;
-  position: relative;
-  overflow: hidden;
-}
-
-.m-card-image .a-image {
-  width: 100%;
-  transform: scale(1);
-  transition: 0.3s;
-}
-
-.m-card-body {
-  display: block;
-  padding: 20px 20px 30px;
-}
-
-.m-card-body h3 {
-  margin-bottom: 30px;
-}
 .o-episode-detail {
   min-height: 100vh;
   position: relative;
@@ -117,11 +76,8 @@ li {
 /* A.1. END -------------------------------------------- */
 
 /* B. MEDIA QUERIES ------------------------------------ */
-
 /* B.1. GRACEFUL DEGRADATION ------------ */
-
 /* B.1. END ----------------------------- */
-
 /* B.2. PROGRESSIVE ENHANCEMENT --------- */
 /* 768px up */
 @media (min-width: 768px) {
@@ -136,13 +92,6 @@ li {
 
 /* 991px up */
 @media (min-width: 991px) {
-  .m-card-body {
-    padding: 20px 40px 40px;
-  }
-  .m-card-body h3 {
-    margin-bottom: 50px;
-  }
-
   .o-episode-detail .o-card {
     position: absolute;
     bottom: 80px;
@@ -151,14 +100,6 @@ li {
     min-height: 40%;
     background-color: rgba(255, 255, 255, 0.85);
   }
-}
-
-/* 1200px up */
-@media (min-width: 1200px) {
-}
-
-/* 1440px up */
-@media (min-width: 1440px) {
 }
 
 /* B.2. END ----------------------------- */

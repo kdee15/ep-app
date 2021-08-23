@@ -1,3 +1,51 @@
+/* LAYOUT [ MAIN HOME ELEMENTS ]  ################################################################################## */
+
+/* A.1. GLOBAL STYLE ----------------------------------- */
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 100;
+  background-color: #212121;
+  text-align: right;
+}
+
+.nav {
+  display: block;
+}
+
+.link {
+  display: inline-block;
+}
+
+.header nav a {
+  color: white;
+  padding: 10px 0;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+}
+
+.header nav a:after {
+  position: absolute;
+  content: "";
+  bottom: 5px;
+  height: 2px;
+  width: 0%;
+  background-color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+.header nav a:hover:after {
+  width: 100%;
+  transition: 0.3s;
+}
+
 .main {
   display: block;
 }
@@ -13,3 +61,33 @@
   color: rgb(158, 152, 152);
   font-size: 14px;
 }
+
+/* A.1. END -------------------------------------------- */
+
+/* B. MEDIA QUERIES ------------------------------------ */
+
+/* B.1. GRACEFUL DEGRADATION ------------ */
+
+/* B.1. END ----------------------------- */
+
+/* B.2. PROGRESSIVE ENHANCEMENT --------- */
+/* 768px up */
+@media (min-width: 768px) {
+}
+
+/* 991px up */
+@media (min-width: 991px) {
+}
+
+/* 1200px up */
+@media (min-width: 1200px) {
+}
+
+/* 1440px up */
+@media (min-width: 1440px) {
+}
+
+/* B.2. END ----------------------------- */
+/* B. END ---------------------------------------------- */
+
+/* END OF FILE ##################################################################################################### */
