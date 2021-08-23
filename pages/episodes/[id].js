@@ -48,7 +48,7 @@ export default function Episode(props) {
           <h1>{epData.name}</h1>
         </div>
       </div>
-      <button className="m-btn _back" onClick={() => router.back()}>
+      <button className="m-btn btn _back" onClick={() => router.back()}>
         <span className="icon">
           <ArrowRightIcon />
         </span>

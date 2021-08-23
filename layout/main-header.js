@@ -4,8 +4,8 @@ import classes from "./main-header.module.css";
 function MainHeader() {
   return (
     <header className={classes.header}>
-      <Link href="/" className={classes.link}>
-        <span>HOME</span>
+      <Link href="/" className={classes.top}>
+        <a className={classes.top}>HOME</a>
       </Link>
       <div className={classes.logo}></div>
     </header>
