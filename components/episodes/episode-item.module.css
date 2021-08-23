@@ -12,13 +12,18 @@
   transition: 0.3s;
 }
 
+.image {
+  width: 100%;
+  transform: scale(1);
+  transition: 0.3s;
+}
+
 .card:hover {
   box-shadow: 0 0 10px #585656;
   transition: 0.3s;
 }
 
-.card:hover .picture img,
-.card:hover .image {
+.wrapper:hover .image {
   transform: scale(1.05);
   transition: 0.8s;
 }
@@ -28,12 +33,6 @@
   display: block;
   position: relative;
   overflow: hidden;
-}
-
-.image {
-  width: 100%;
-  transform: scale(1);
-  transition: 0.3s;
 }
 
 .body {
