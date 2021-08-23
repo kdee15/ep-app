@@ -7,10 +7,35 @@
   top: 0;
   right: 0;
   width: 100%;
-  padding: 10px 20px;
+  padding: 0 20px;
   z-index: 100;
   background-color: #212121;
   text-align: right;
+}
+
+.header nav a {
+  color: white;
+  padding: 10px 0;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+}
+
+.header nav a:after {
+  position: absolute;
+  content: "";
+  bottom: 5px;
+  height: 2px;
+  width: 0%;
+  background-color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+.header nav a:hover:after {
+  width: 100%;
+  transition: 0.3s;
 }
 
 /* A.1. END -------------------------------------------- */

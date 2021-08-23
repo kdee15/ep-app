@@ -1,6 +1,11 @@
 /* EPISODES [ EPISODE LIST ]  ###################################################################################### */
 
 /* A.1. GLOBAL STYLE ----------------------------------- */
+
+.m-card-image {
+  transform: scale(4);
+}
+
 .icon {
   width: 20px;
   display: inline-block;

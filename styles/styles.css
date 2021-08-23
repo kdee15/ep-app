@@ -56,22 +56,36 @@ li {
 /* EPISODE LIST CARDS ------------------- */
 
 .o-card {
-  box-shadow: 0 0 10px #292626;
+  box-shadow: 0 0 5px #292626;
   padding: 0;
   margin-bottom: 30px;
   background-color: #f2f2f2;
   border-radius: 8px;
   overflow: hidden;
+  transition: 0.3s;
+}
+
+.o-card:hover {
+  box-shadow: 0 0 10px #585656;
+  transition: 0.3s;
+}
+
+.o-card:hover .m-card-image .a-image {
+  transform: scale(1.05);
+  transition: 0.8s;
 }
 
 .m-card-image {
   width: 100%;
   display: block;
   position: relative;
+  overflow: hidden;
 }
 
 .m-card-image .a-image {
   width: 100%;
+  transform: scale(1);
+  transition: 0.3s;
 }
 
 .m-card-body {

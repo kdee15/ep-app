@@ -1,0 +1,15 @@
+.main {
+  display: block;
+}
+
+.footer {
+  display: block;
+  padding: 50px;
+  background-color: #212121;
+  text-align: center;
+}
+
+.footer p {
+  color: rgb(158, 152, 152);
+  font-size: 14px;
+}
