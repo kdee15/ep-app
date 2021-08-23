@@ -32,6 +32,28 @@ li {
   font-size: 20px;
 }
 
+/* USER INPUTS -------------------------- */
+
+.m-btn._back {
+  border: 0;
+  padding: 5px 20px;
+  background-color: rgb(165, 22, 117);
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+}
+
+.m-btn._back .icon svg {
+  transform: rotate(180deg);
+  transform-origin: center;
+  width: 20px;
+  margin-right: 8px;
+}
+.m-btn._back:active,
+.m-btn._back:hover {
+  background-color: #ccc;
+}
+
 /* EPISODE LIST CARDS ------------------- */
 
 .o-card {
@@ -39,6 +61,8 @@ li {
   padding: 0;
   margin-bottom: 30px;
   background-color: #f2f2f2;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .m-card-image {
@@ -62,6 +86,7 @@ li {
 .o-episode-detail {
   min-height: 100vh;
   position: relative;
+  background-color: #e2cfcf;
 }
 .o-episode-detail .a-image {
   width: 100%;
@@ -71,9 +96,9 @@ li {
 .o-episode-detail .o-card {
   max-width: 80%;
   margin: -30px auto 50px;
-  background-color: rgba(255, 255, 255, 0.85);
   z-index: 10;
   position: relative;
+  background-color: #f2f2f2;
 }
 
 /* A.1. END -------------------------------------------- */
@@ -111,6 +136,7 @@ li {
     left: 100px;
     min-width: 50%;
     min-height: 40%;
+    background-color: rgba(255, 255, 255, 0.85);
   }
 }
 
