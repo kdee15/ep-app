@@ -17,7 +17,8 @@
   transition: 0.3s;
 }
 
-.card:hover .picture .image {
+.card:hover .picture img,
+.card:hover .image {
   transform: scale(1.05);
   transition: 0.8s;
 }

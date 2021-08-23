@@ -17,7 +17,8 @@
   transition: 0.3s;
 }
 
-.card:hover .picture .image {
+.card:hover .picture img,
+.card:hover .image {
   transform: scale(1.05);
   transition: 0.8s;
 }
@@ -53,10 +54,28 @@
 /* A.1. END -------------------------------------------- */
 
 /* B. MEDIA QUERIES ------------------------------------ */
+/* B.1. GRACEFUL DEGRADATION ------------ */
+@media (max-width: 991px) {
+  .picture {
+    height: 0;
+    padding-top: 125%;
+  }
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
 
+@media (max-width: 767px) {
+  .picture {
+    padding-top: 100%;
+  }
+}
+/* B.1. END ----------------------------- */
 /* B.2. PROGRESSIVE ENHANCEMENT --------- */
 /* 991px up */
-@media (min-width: 992px) {
+@media (min-width: 991px) {
   .body {
     padding: 20px 40px 40px;
   }
