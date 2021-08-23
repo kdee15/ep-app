@@ -1,5 +1,6 @@
 import ArrowRightIcon from "../icons/arrow-right-icon";
 import Button from "../ui/button";
+import Card from "../ui/card";
 import classes from "./episode-item.module.css";
 
 function EpisodeItem(props) {
@@ -7,7 +8,7 @@ function EpisodeItem(props) {
   const exploreLink = `/episodes/${id}`;
   return (
     <div className="col-12 col-md-6">
-      <div className={classes.card}>
+      <Card>
         <picture className={classes.picture}>
           <source
             media="(min-width: 991px)"
@@ -37,7 +38,7 @@ function EpisodeItem(props) {
             </span>
           </Button>
         </div>
-      </div>
+      </Card>
     </div>
   );
 }

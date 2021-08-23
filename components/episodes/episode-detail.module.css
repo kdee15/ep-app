@@ -1,44 +1,52 @@
 /* EPISODES [ EPISODE LIST ]  ###################################################################################### */
 
 /* A.1. GLOBAL STYLE ----------------------------------- */
-/* .icon {
-  width: 20px;
-  display: inline-block;
-  margin-left: 10px;
-}
 
-.m-card-image {
-  width: 100%;
-  display: block;
+.block {
+  min-height: 100vh;
   position: relative;
+  background-color: #e2cfcf;
+  padding-bottom: 100px;
 }
-
 .image {
   width: 100%;
-} */
+  position: relative;
+  z-index: 0;
+}
+.cardregion {
+  max-width: 80%;
+  margin: -30px auto 0;
+  z-index: 10;
+  position: relative;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+}
+
 /* A.1. END -------------------------------------------- */
 
 /* B. MEDIA QUERIES ------------------------------------ */
 
-/* B.1. GRACEFUL DEGRADATION ------------ */
-
-/* B.1. END ----------------------------- */
-
 /* B.2. PROGRESSIVE ENHANCEMENT --------- */
-/* 768px up */
-@media (min-width: 768px) {
-}
 
 /* 991px up */
 @media (min-width: 991px) {
-}
-
-/* 1200px up */
-@media (min-width: 1200px) {
+  .cardregion {
+    position: absolute;
+    bottom: 120px;
+    left: 100px;
+    width: 60%;
+    min-height: 40%;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
 }
 
 /* 1440px up */
 @media (min-width: 1440px) {
+  .cardregion {
+    width: 40%;
+  }
 }
 
 /* B.2. END ----------------------------- */

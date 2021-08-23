@@ -54,8 +54,24 @@
 
 /* B. MEDIA QUERIES ------------------------------------ */
 /* B.1. GRACEFUL DEGRADATION ------------ */
-/* B.1. END ----------------------------- */
+@media (max-width: 991px) {
+  .picture {
+    height: 0;
+    padding-top: 125%;
+  }
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
 
+@media (max-width: 767px) {
+  .picture {
+    padding-top: 100%;
+  }
+}
+/* B.1. END ----------------------------- */
 /* B.2. PROGRESSIVE ENHANCEMENT --------- */
 /* 991px up */
 @media (min-width: 991px) {

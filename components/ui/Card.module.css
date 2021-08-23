@@ -1,5 +1,71 @@
+/* EPISODES [ EPISODE LIST ITEMS ]  ################################################################################ */
+
+/* A.1. GLOBAL STYLE ----------------------------------- */
+
 .card {
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px #292626;
+  padding: 0;
+  margin-bottom: 30px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.3s;
 }
+
+.card:hover {
+  box-shadow: 0 0 10px #585656;
+  transition: 0.3s;
+}
+
+.card:hover .picture .image {
+  transform: scale(1.05);
+  transition: 0.8s;
+}
+
+.picture {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.body {
+  display: block;
+  padding: 20px 20px 30px;
+}
+
+.body h3 {
+  margin-bottom: 30px;
+}
+
+.icon {
+  width: 20px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* A.1. END -------------------------------------------- */
+
+/* B. MEDIA QUERIES ------------------------------------ */
+
+/* B.2. PROGRESSIVE ENHANCEMENT --------- */
+/* 991px up */
+@media (min-width: 992px) {
+  .body {
+    padding: 20px 40px 40px;
+  }
+  .body h3 {
+    margin-bottom: 50px;
+  }
+}
+
+/* B.2. END ----------------------------- */
+/* B. END ---------------------------------------------- */
+
+/* END OF FILE ##################################################################################################### */
